@@ -18,13 +18,12 @@ namespace EnBibliotechDB.Logic
         public Publishing_HouseLogic() 
         {
             model = new Entity.Entity();
-            model = new Entity.Entity();
             Publishing_Houses = new List<Publishing_HouseModel>();
         }
 
         public async Task Fill() 
         {
-            await model.Publishing_House.LoadAsync();
+            model.Publishing_House.Load();//проблема тут
             foreach (Publishing_House item in model.Publishing_House.Local)
             {
                 Publishing_Houses.Add(new Publishing_HouseModel().Fill(item));

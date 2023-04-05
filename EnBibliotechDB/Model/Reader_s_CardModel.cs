@@ -14,13 +14,16 @@ namespace EnBibliotechDB.Model
         public virtual Bibliotheck Bibliotheck { get; set; }
         public virtual ICollection<Book> Book { get; set; }
         public virtual Reader Reader { get; set; }
+        
+        
+        
         public Reader_s_CardModel Fill(Reader_s_Card data)
         {
             return new Reader_s_CardModel() 
             {
             id = data.id,
             idBibliotheck = data.idBibliotheck,
-            //Bibliotheck = data.Bibliotheck,
+            Bibliotheck = data.Bibliotheck,
             Book = data.Book,
             Reader = data.Reader
             };

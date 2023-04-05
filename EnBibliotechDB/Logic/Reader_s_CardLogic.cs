@@ -12,20 +12,21 @@ namespace EnBibliotechDB.Logic
 {
     internal class Reader_s_CardLogic
     {
-        Entity.Entity model;
+        public Entity.Entity Entity;
         public List<Reader_s_CardModel> Reader_s_Cards { get; set; }
         Reader_s_CardModel selectedReader_s_Card { get; set; }
         public Reader_s_CardLogic()
         {
-            model = new Entity.Entity();
+            Entity = new Entity.Entity();
             Reader_s_Cards = new List<Reader_s_CardModel>();
 
         }
 
         public async Task Fill()
         {
-            await model.author.LoadAsync();
-            foreach (Reader_s_Card item in model.Reader_s_Card.Local)
+            
+            Entity.Reader_s_Card.Load();
+            foreach (Reader_s_Card item in Entity.Reader_s_Card.Local)
             {
                 Reader_s_Cards.Add(new Reader_s_CardModel().Fill(item));
             }

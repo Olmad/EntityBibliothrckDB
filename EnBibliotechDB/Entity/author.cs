@@ -20,9 +20,11 @@ namespace EnBibliotechDB.Entity
         [StringLength(50)]
         public string adress { get; set; }
 
-        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<Book> Book { get; set; }
+        public int? id_Person { get; set; }
 
         public virtual Person Person { get; set; }
+
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        public virtual ICollection<Book> Book { get; set; }
     }
 }

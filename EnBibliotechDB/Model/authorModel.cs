@@ -11,7 +11,9 @@ namespace EnBibliotechDB.Model
     {
         public int id { get; set; }
         public virtual ICollection<Book> Book { get; set; }
+        public string adress { get; set; }
         public virtual Person Person { get; set; }
+        public int? id_Person { get; set; }
 
         public authorModel Fill(author data)
         {
@@ -19,6 +21,8 @@ namespace EnBibliotechDB.Model
             {
             id = data.id,
             Book = data.Book,
+            adress = data.adress,
+            id_Person = data.id_Person,
             Person = data.Person
             };
         

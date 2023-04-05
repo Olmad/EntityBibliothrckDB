@@ -85,6 +85,12 @@
     <Compile Include="AddReader_s_Card.Designer.cs">
       <DependentUpon>AddReader_s_Card.cs</DependentUpon>
     </Compile>
+    <Compile Include="authorTableForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="authorTableForm.Designer.cs">
+      <DependentUpon>authorTableForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="Entity\author.cs" />
     <Compile Include="Entity\Bibliotheck.cs" />
     <Compile Include="Entity\Book.cs" />
@@ -105,6 +111,12 @@
     <Compile Include="Logic\BookLogic.cs" />
     <Compile Include="Logic\Publishing_HouseLogic.cs" />
     <Compile Include="Logic\Reader_s_CardLogic.cs" />
+    <Compile Include="MainForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MainForm.Designer.cs">
+      <DependentUpon>MainForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="Model\authorModel.cs" />
     <Compile Include="Model\BibliotheckModel.cs" />
     <Compile Include="Model\BookModel.cs" />
@@ -127,8 +139,14 @@
     <EmbeddedResource Include="AddReader_s_Card.resx">
       <DependentUpon>AddReader_s_Card.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="authorTableForm.resx">
+      <DependentUpon>authorTableForm.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MainForm.resx">
+      <DependentUpon>MainForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

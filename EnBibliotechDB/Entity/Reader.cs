@@ -14,6 +14,8 @@ namespace EnBibliotechDB.Entity
         [StringLength(50)]
         public string adress { get; set; }
 
+        public int? id_Person { get; set; }
+
         public virtual Person Person { get; set; }
 
         public virtual Reader_s_Card Reader_s_Card { get; set; }

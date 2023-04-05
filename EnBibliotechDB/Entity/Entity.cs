@@ -8,7 +8,7 @@ namespace EnBibliotechDB.Entity
     public partial class Entity : DbContext
     {
         public Entity()
-            : base("name=Entity1")
+            : base("name=Entity4")
         {
         }
 
@@ -29,10 +29,6 @@ namespace EnBibliotechDB.Entity
                 .HasForeignKey(e => e.idAuthor)
                 .WillCascadeOnDelete(false);
 
-            modelBuilder.Entity<author>()
-                .HasOptional(e => e.Person)
-                .WithRequired(e => e.author);
-
             modelBuilder.Entity<Bibliotheck>()
                 .HasMany(e => e.Reader_s_Card)
                 .WithRequired(e => e.Bibliotheck)
@@ -40,8 +36,14 @@ namespace EnBibliotechDB.Entity
                 .WillCascadeOnDelete(false);
 
             modelBuilder.Entity<Person>()
-                .HasOptional(e => e.Reader)
-                .WithRequired(e => e.Person);
+                .HasMany(e => e.author)
+                .WithOptional(e => e.Person)
+                .HasForeignKey(e => e.id_Person);
+
+            modelBuilder.Entity<Person>()
+                .HasMany(e => e.Reader)
+                .WithOptional(e => e.Person)
+                .HasForeignKey(e => e.id_Person);
 
             modelBuilder.Entity<Publishing_House>()
                 .HasMany(e => e.Book)
@@ -59,8 +61,9 @@ namespace EnBibliotechDB.Entity
                 .HasForeignKey(e => e.idReadersCard);
 
             modelBuilder.Entity<SNP>()
-                .HasOptional(e => e.Person)
-                .WithRequired(e => e.SNP);
+                .HasMany(e => e.Person)
+                .WithOptional(e => e.SNP)
+                .HasForeignKey(e => e.id_SNP);
         }
     }
 }

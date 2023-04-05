@@ -20,7 +20,7 @@ namespace EnBibliotechDB.Model
             id = data.id,
             title = data.title,
             adress = data.adress,
-            //Book = data.Book
+            Book = data.Book
             };
         }
     }

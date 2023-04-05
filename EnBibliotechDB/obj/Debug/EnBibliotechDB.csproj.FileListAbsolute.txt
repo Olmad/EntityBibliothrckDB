@@ -17,3 +17,8 @@ C:\Users\admin\source\repos\EnBibliotechDB\EnBibliotechDB\bin\Debug\ru\EntityFra
 C:\Users\admin\source\repos\EnBibliotechDB\EnBibliotechDB\obj\Debug\EnBibliotechDB.csproj.CopyComplete
 C:\Users\admin\source\repos\EnBibliotechDB\EnBibliotechDB\obj\Debug\EnBibliotechDB.exe
 C:\Users\admin\source\repos\EnBibliotechDB\EnBibliotechDB\obj\Debug\EnBibliotechDB.pdb
+C:\Users\admin\source\repos\EnBibliotechDB\EnBibliotechDB\obj\Debug\EnBibliotechDB.AddBibliotheck.resources
+C:\Users\admin\source\repos\EnBibliotechDB\EnBibliotechDB\obj\Debug\EnBibliotechDB.AddPublishing_House.resources
+C:\Users\admin\source\repos\EnBibliotechDB\EnBibliotechDB\obj\Debug\EnBibliotechDB.AddReader_s_Card.resources
+C:\Users\admin\source\repos\EnBibliotechDB\EnBibliotechDB\obj\Debug\EnBibliotechDB.MainForm.resources
+C:\Users\admin\source\repos\EnBibliotechDB\EnBibliotechDB\obj\Debug\EnBibliotechDB.authorTableForm.resources

@@ -9,6 +9,12 @@ namespace EnBibliotechDB.Entity
     [Table("SNP")]
     public partial class SNP
     {
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
+        public SNP()
+        {
+            Person = new HashSet<Person>();
+        }
+
         public int id { get; set; }
 
         [Required]
@@ -23,6 +29,7 @@ namespace EnBibliotechDB.Entity
         [StringLength(20)]
         public string patronomic { get; set; }
 
-        public virtual Person Person { get; set; }
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        public virtual ICollection<Person> Person { get; set; }
     }
 }

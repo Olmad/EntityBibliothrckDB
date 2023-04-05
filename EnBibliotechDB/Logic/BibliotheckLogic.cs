@@ -22,7 +22,7 @@ namespace EnBibliotechDB.Logic
         }
         public async Task Fill() 
         {
-            await model.Bibliotheck.LoadAsync();
+            model.Bibliotheck.Load();
             foreach (Bibliotheck item in model.Bibliotheck.Local)
             {
                 Bibliothecks.Add(new BibliotheckModel().Fill(item));

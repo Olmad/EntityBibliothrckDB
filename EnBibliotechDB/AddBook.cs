@@ -1,7 +1,10 @@
-﻿using System;
+﻿using EnBibliotechDB.Entity;
+using EnBibliotechDB.Logic;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Data.Entity;
 using System.Drawing;
 using System.Linq;
 using System.Text;
@@ -15,10 +18,26 @@ namespace EnBibliotechDB
         public AddBook()
         {
             InitializeComponent();
-            /*ScrollBar vScrollBar1 = new VScrollBar();
-vScrollBar1.Dock = DockStyle.Right;
-            vScrollBar1.Scroll += (sender, e) => { panel1.VerticalScroll.Value = vScrollBar1.Value; };
-            panel1.Controls.Add(vScrollBar1);*/
+            
+            
+            Reader_s_CardLogic RCL = new Reader_s_CardLogic();
+            RCL.Fill();
+            authorLogic AL = new authorLogic();
+            AL.Fill();
+            Publishing_HouseLogic PHL = new Publishing_HouseLogic();
+            PHL.Fill(); 
+            foreach (Model.Reader_s_CardModel reader in RCL.Reader_s_Cards) 
+            {
+                comboBox1.Items.Add(reader.Reader.Person.SNP.surename + " " + reader.Reader.Person.SNP.name + " " + reader.Reader.Person.SNP.patronomic);
+            }
+            foreach (Model.authorModel author in AL.authors)
+            {
+                comboBox2.Items.Add(author.Person.SNP.surename+" "+ author.Person.SNP.name + author.Person.SNP.patronomic);
+            }
+            foreach (Model.Publishing_HouseModel PH in PHL.Publishing_Houses)
+            {
+                comboBox3.Items.Add(PH.title);
+            }
 
         }
 
